@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+int main()
+{
+int LFSR ()
+{
+static unsigned long ShiftRegister = 79; /* Начальное состояние */
+ShiftRegister =
+ ((((ShiftRegister >> 6) ^ (ShiftRegister >> 2)) & 0x01) << 6) | (ShiftRegister >> 1);
+/*cout << ShiftRegister;  cout <<ShiftRegister << end1;*/
+
+return ShiftRegister & 0x01;
+printf( ShiftRegister);
+}
+}
